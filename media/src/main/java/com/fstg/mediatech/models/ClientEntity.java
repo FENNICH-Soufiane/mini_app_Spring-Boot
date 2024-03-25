@@ -15,9 +15,10 @@ import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 
-
+@Setter
 @Entity
 @Table(name = "clients")
 @Data
@@ -25,6 +26,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class ClientEntity implements Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Id()
 	@GeneratedValue
 	private Integer id;
